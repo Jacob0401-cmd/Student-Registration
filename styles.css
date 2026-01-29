@@ -1,0 +1,111 @@
+
+    h2 {
+      text-align: center;
+      color: #000000;
+      font-size: 20px ;
+    }
+
+    form {  
+      background: #fff;
+      padding: 20px;
+      padding-right: 35px;
+      border-radius: 8px;
+      max-width: 400px;
+      margin: 0 auto;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      margin-top: 20px;
+      margin-bottom: -20px;
+    }
+
+    label {
+      display: flex;
+      margin-bottom: 6px;
+      font-weight: bold;
+      padding-left: 5px;
+      color: #363637;
+      font-family: Georgia, 'Times New Roman', Times, serif;
+    }
+
+    input {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    button {
+      background-color: #579cf6;
+      color: white;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      width: 63%;
+      font-size: 16px;
+      margin-right: 80px;
+      margin-left: 80px;
+      display: block;
+    }
+
+    button:hover {
+      background-color: #1550bd;
+    }
+
+    h3 {
+      margin-top: 30px;
+      text-align: center;
+      color: #333;
+    }
+
+    ul {
+      list-style-type: none;
+      padding: 0;
+      max-width: 400px;
+      margin: 0 auto;
+    }
+
+    ul li {
+      background: #e9f5e9;
+      margin: 8px 0;
+      padding: 10px;
+      border-radius: 5px;
+      border-left: 4px solid #4CAF50;
+    }
+    #confirmation {
+     margin-top: 30px;
+     text-align: center;
+     font-weight: bold;
+     color: rgb(27, 13, 121);
+     opacity: 0;              
+     transition: opacity 1s;  
+    }
+    #confirmation.show {
+     opacity: 1;              
+    }
+     body { margin: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f4f4f4; overflow: hidden;
+    } 
+    .header { background-color: #e1e0ef; color: white; padding: 40px; text-align: center; 
+    } 
+    .header h1 { margin: 0; font-size: 28px; color: #FFD700; 
+    } 
+    .header h2 { margin: 5px 0; font-size: 24px; font-weight: bold;margin-top: -10px;margin-bottom: 25px; 
+    } 
+    .header p { margin: 5px 0; font-size: 14px; 
+    } 
+    .form-container { display: flex; justify-content: center; align-items: center; height: calc(100vh - 160px); 
+    } 
+    .form-box { background-color: white; padding: 30px; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.1); width: 300px; 
+    } 
+    .form-box h3 { text-align: center; margin-bottom: 20px; color: #003366; 
+    } 
+    .form-box input { width: 100%; padding: 8px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 5px; 
+    } 
+    .form-box button { width: 100%; padding: 10px; background-color: #28a745; color: white; border: none; border-radius: 5px; font-size: 16px; cursor: pointer; 
+    } 
+    .form-box button:hover { background-color: #218838; }
+    .logo { height: 100px; vertical-align: middle; margin-right: 15px; margin-bottom: 15px;margin-top: -25px; }
+    .university-name { font-size: 34px; align-items: center; font-weight: bolder; color: #000000; font-family:'Times New Roman', Times, serif;margin-bottom: 10px;}
+    .subtext { font-size: 26px; color: #363637; font-family: 'Times New Roman', Times, serif;}
+    .txt-box { border: 1px solid #ccc; border-radius: 4px; padding: 8px; width: 100%; box-sizing: border-box; margin-bottom: 5px; }
+    
