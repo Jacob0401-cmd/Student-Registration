@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <title>Student Data Form</title>
   <link rel="stylesheet" type="text/css" href="styles.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
+
 <body>
   <div class="header">
     <img src="ds.logo.png" alt="University Logo" class="logo">
@@ -12,30 +14,97 @@
       <div class="university-name">Dhanalakshmi Srinivasan University</div>
       <div class="subtext">School of Engineering and Technology</div>
     </div>
-  
-    
-  
-  <form id="studentForm">
-    <h2>Student Form </h2>
-    <label for="name">Student Name:</label>
-    <input class="txt-box" placeholder="Enter your name" type="text" id="name" required><br><br>
-    
-    <label for="regno">Registration No:</label>
-    <input class="txt-box" placeholder="Enter your registration number" type="text" id="regno" required><br><br>
 
-    <label for="dept">Department:</label>
-    <input class="txt-box" placeholder="Enter your department" type="text" id="dept" required><br><br>
 
-    <label for="section">Section:</label>
-    <input class="txt-box" placeholder="Enter your section" type="text" id="section" required><br><br>
-    
-    <button type="submit">Save</button>
-  </form>
-   <div id="confirmation"></div>
-  
 
-  <script src="input.js"></script>
+    <form id="studentForm">
+      <h2>Student Form </h2>
+      <label for="name">Student Name:</label>
+      <input class="txt-box" placeholder="Enter your name" type="text" id="name" required><br><br>
+
+      <label for="regno">Registration No:</label>
+
+      <input class="txt-box" placeholder="Enter your registration number" type="text" id="regno" required><br><br>
+
+      <label for="dept">Department:</label>
+      <input class="txt-box" placeholder="Enter your department" type="text" id="dept" required><br><br>
+
+      <label for="section">Section:</label>
+      <input class="txt-box" placeholder="Enter your section" type="text" id="section" required><br><br>
+
+      <button type="submit">Save</button>
+    </form>
+    <div id="confirmation"></div>
+
+
+   <script>
+  // ✅ Define script URL correctly
+  const scriptURL =
+    "https://script.google.com/macros/s/AKfycbxHuWuhHbzzjq4Pqju0u_oUquTPutSh4T4Ab7umvl6oO3yLyOHdj1RBzFKD_E8tqV9qKA/exec";
+
+  // ✅ Form Submit Event
+  document.getElementById("studentForm").addEventListener("submit", async function (event) {
+    event.preventDefault();
+
+    const student = {
+      name: document.getElementById("name").value,
+      regno: document.getElementById("regno").value,
+      dept: document.getElementById("dept").value,
+      section: document.getElementById("section").value
+    };
+
+    try {
+      // ✅ Send data to Google Sheets (NO headers needed)
+      await fetch(scriptURL, {
+        method: "POST",
+        body: JSON.stringify(student)
+      });
+
+      // ✅ Show confirmation
+      const confirmation = document.getElementById("confirmation");
+      confirmation.textContent = "✔️ Thank you for filling your details!";
+      confirmation.classList.add("show");
+
+      setTimeout(() => {
+        confirmation.classList.remove("show");
+      }, 3000);
+
+      // Reset form
+      document.getElementById("studentForm").reset();
+
+      // Reload list
+      loadStudents();
+
+    } catch (err) {
+      alert("❌ Error submitting data: " + err);
+    }
+  });
+
+  // ✅ Load Students Function
+  async function loadStudents() {
+    try {
+      const res = await fetch(scriptURL);
+      const students = await res.json();
+
+      const list = document.getElementById("studentList");
+      list.innerHTML = "";
+
+      students.forEach(student => {
+        const li = document.createElement("li");
+        li.textContent =
+          `Name: ${student.name}, Reg No: ${student.regno}, Dept: ${student.dept}, Section: ${student.section}`;
+        list.appendChild(li);
+      });
+
+    } catch (err) {
+      console.log("❌ Error loading students:", err);
+    }
+  }
+
+  // ✅ Load student list when page opens
+  window.onload = loadStudents;
+</script>
+
 </body>
+
 </html>
-
-
