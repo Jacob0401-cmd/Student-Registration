@@ -13,24 +13,35 @@
     <div class="header-text">
       <div class="university-name">Dhanalakshmi Srinivasan University</div>
       <div class="subtext">School of Engineering and Technology</div>
+      <div class="subtext1">Artificial Intelligence and Machine Learning</div>
+      <div class="subtext3">GenAI Workshop</div>
     </div>
 
 
 
     <form id="studentForm">
       <h2>Student Form </h2>
-      <label for="name">Student Name:</label>
-      <input class="txt-box" placeholder="Enter your name" type="text" id="name" required><br><br>
+     <div class="form-row"> 
+      <div class="form-group">
+        <label for="name">Student Name:</label>
+        <input class="txt-box" placeholder="Enter your name" type="text" id="name" required><br><br>
 
-      <label for="regno">Registration No:</label>
+        <label for="regno">Registration No:</label>
+        <input class="txt-box" placeholder="Enter your registration number" type="text" id="regno" required><br><br>
+      </div>
+     </div>
+     <div class="form-row">
+      <div class="form-group">
+       <label for="dept">Department:</label>
+       <input class="txt-box" placeholder="Enter your department" type="text" id="dept" required><br><br>
 
-      <input class="txt-box" placeholder="Enter your registration number" type="text" id="regno" required><br><br>
+       <label for="section">Section:</label>
+       <input class="txt-box" placeholder="Enter your section" type="text" id="section" required><br><br>
+      </div>
+     </div>
+      
 
-      <label for="dept">Department:</label>
-      <input class="txt-box" placeholder="Enter your department" type="text" id="dept" required><br><br>
-
-      <label for="section">Section:</label>
-      <input class="txt-box" placeholder="Enter your section" type="text" id="section" required><br><br>
+      
 
       <button type="submit">Save</button>
     </form>

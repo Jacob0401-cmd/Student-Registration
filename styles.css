@@ -13,8 +13,8 @@
       max-width: 400px;
       margin: 0 auto;
       box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-      margin-top: 20px;
-      margin-bottom: -20px;
+      margin-top: 10px;
+      margin-bottom: -10px;
     }
 
     label {
@@ -83,7 +83,7 @@
     #confirmation.show {
      opacity: 1;              
     }
-     body { margin: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f4f4f4; overflow: hidden;
+     body { margin: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f4f4f4;  box-sizing: border-box;
     } 
     .header { background-color: #e1e0ef; color: white; padding: 40px; text-align: center; 
     } 
@@ -104,8 +104,11 @@
     .form-box button { width: 100%; padding: 10px; background-color: #28a745; color: white; border: none; border-radius: 5px; font-size: 16px; cursor: pointer; 
     } 
     .form-box button:hover { background-color: #218838; }
-    .logo { height: 100px; vertical-align: middle; margin-right: 15px; margin-bottom: 15px;margin-top: -25px; }
-    .university-name { font-size: 34px; align-items: center; font-weight: bolder; color: #000000; font-family:'Times New Roman', Times, serif;margin-bottom: 10px;}
-    .subtext { font-size: 26px; color: #363637; font-family: 'Times New Roman', Times, serif;}
+    .logo { height: 100px; vertical-align: middle; margin-right: 15px; margin-bottom: 5px;margin-top: -28px; }
+    .university-name { font-size: 32px; align-items: center; font-weight:500; color: #000000; font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;margin-bottom: 4px;}
+    .subtext { font-size: 28px; color: #242426;font-weight: 500; font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;}
     .txt-box { border: 1px solid #ccc; border-radius: 4px; padding: 8px; width: 100%; box-sizing: border-box; margin-bottom: 5px; }
-    
+    .subtext1 { font-size: 18px; color: #242426; font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; margin-bottom: 2px;}
+    .subtext2 { font-size: 18px; color: #242426; font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; margin-bottom: 2px;}
+    .subtext3 { font-size: 28px; color: #f2a60f;     -webkit-text-stroke: .5px black; font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;font-weight: bold;}
+  
