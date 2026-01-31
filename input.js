@@ -78,7 +78,7 @@ document.getElementById("studentForm").addEventListener("submit", async function
 
   setTimeout(() => {
     document.getElementById("confirmation").classList.remove("show");
-  }, 3000);
+  }, 1000);
 
   document.getElementById("studentForm").reset();
   loadStudents();
